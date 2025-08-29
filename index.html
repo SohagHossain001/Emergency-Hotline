@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Hotline</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans">
+<header class="navbar bg-white shadow-md z-50 fixed top-0 w-full px-4 md:px-8">
+<div class="flex-1">
+<a class="flex items-center gap-2 text-xl font-bold text-gray-800">
+<img src="./assets/logo.png" alt="Emergency Hotline Logo" class="h-8 w-8">
+Emergency Service
+</a>
+</div>
+<div class="flex-none gap-4 items-center">
+<div class="flex items-center gap-1 text-gray-600">
+<img src="./assets/heart.png" alt="Heart icon" class="h-6 w-6">
+<span id="heart-count">0</span>
+</div>
+<div class="flex items-center gap-1 text-gray-600">
+<img src="./assets/coin.png" alt="Coin icon" class="h-6 w-6">
+<span id="coin-count">100</span>
+</div>
+ <div class="flex items-center gap-1 text-gray-600">
+<img src="./assets/copyicon.png" alt="Copy icon" class="h-6 w-6">
+<span id="copy-count">0</span>
+</div>
+</div>
+</header>
+
+<main class="pt-20">
+<section class="text-white py-12 px-4 md:px-8 flex flex-col items-center text-center rounded-b-xl shadow-lg"
+style="background: linear-gradient(to right, #01402C, #026644);">
+<img src="./assets/logo-dark.png" alt="Bangladesh logo" class="h-24 w-24 mb-4 drop-shadow">
+<h1 class="text-3xl md:text-5xl font-extrabold mb-2 drop-shadow">Emergency Service Directory</h1>
+<p class="text-lg md:text-xl font-medium drop-shadow">Government Emergency Services at Your Fingertip - A Project by Government of the People's Republic of Bangladesh</p>
+</section>
+
+<section class="p-4 md:p-8 flex flex-col lg:flex-row lg:gap-8 lg:items-start max-w-7xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:w-3/4" id="hotline-grid">
+</div>
+<div class="bg-white p-4 md:p-8 mt-8 lg:mt-0 rounded-lg shadow-md lg:w-1/4">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-gray-500">
+<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75h19.5M2.25 12h19.5m-19.5 5.25h19.5" />
+</svg>
+Call History
+</h2>
+<button class="btn btn-sm text-sm" id="clear-history-btn">Clear</button>
+</div>
+<ul class="space-y-4" id="call-history-list">
+</ul>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
